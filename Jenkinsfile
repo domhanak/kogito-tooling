@@ -5,7 +5,7 @@ pipeline {
         label 'submarine-static || kie-rhel7'
     }
     tools {
-        nodejs "nodejs-10.16.0"
+        nodejs "nodejs-11.0.0"
     }
     options {
         buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '10')
