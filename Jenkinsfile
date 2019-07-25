@@ -2,7 +2,7 @@
 
 pipeline {
     agent {
-        label 'kie-rhel7'
+        label 'kogito-tooling-test'
     }
     tools {
         nodejs "nodejs-11.0.0"
