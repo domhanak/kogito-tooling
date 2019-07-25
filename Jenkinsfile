@@ -13,6 +13,7 @@ pipeline {
     }
     environment {
         SONARCLOUD_TOKEN = credentials('SONARCLOUD_TOKEN')
+        XAUTHORITY=$HOME/.Xauthority
     }
     stages {
         stage('Initialize') {
@@ -31,7 +32,7 @@ pipeline {
                 dir("kogito-tooling") {
                     script {
                         githubscm.checkoutIfExists('kogito-tooling', "$CHANGE_AUTHOR", "$CHANGE_BRANCH", 'kiegroup', "$CHANGE_TARGET")
-                        wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: false]) {
+                        wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
                             sh('yarn run build:prod')
                         }
                     }
