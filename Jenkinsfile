@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh "npm install -g yarn"
                 sh "yarn install"
-                sh "export XAUTHORITY=$HOME/.Xauthority
+                sh "export XAUTHORITY=$HOME/.Xauthority"
                 sh "wget -P $HOME/.vnc https://gitlab.mw.lab.eng.bos.redhat.com/jbossqe-jenkins/mwqa-cloud-slaves/tree/master/label/linux/all_user_hudson/home/hudson/.vnc/passwd"
                 sh "wget -P $HOME/.vnc https://gitlab.mw.lab.eng.bos.redhat.com/jbossqe-jenkins/mwqa-cloud-slaves/tree/master/label/linux/all_user_hudson/home/hudson/.vnc/xstartup"
                 sh "chmod 600 $HOME/.vnc/passwd"
