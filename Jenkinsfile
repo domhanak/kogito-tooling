@@ -13,7 +13,7 @@ pipeline {
     }
     environment {
         SONARCLOUD_TOKEN = credentials('SONARCLOUD_TOKEN')
-        XAUTHORITY=$HOME/.Xauthority
+        XAUTHORITY = $HOME + '/.Xauthority'
     }
     stages {
         stage('Initialize') {
