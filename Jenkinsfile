@@ -2,7 +2,7 @@
 
 pipeline {
     agent {
-        label 'kie-rhel7-with-osbs-19'
+        label 'kie-rhel7'
     }
     tools {
         nodejs "nodejs-11.0.0"
