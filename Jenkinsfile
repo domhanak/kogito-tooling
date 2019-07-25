@@ -21,8 +21,10 @@ pipeline {
             }
         }
         stage('Prepare') {
-            sh "npm install -g yarn"
-            sh "yarn install"
+            steps {
+                sh "npm install -g yarn"
+                sh "yarn install"
+            }
         }
         stage('Build kogito-tooling') {
             steps {
