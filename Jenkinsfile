@@ -25,6 +25,9 @@ pipeline {
             steps {
                 sh "npm install -g yarn"
                 sh "yarn install"
+                sh "wget -P /home/hudson/ https://gitlab.mw.lab.eng.bos.redhat.com/jbossqe-jenkins/mwqa-cloud-slaves/tree/master/label/linux/all_user_hudson/home/hudson/.vnc/passwd"
+                sh "wget -P /home/hudson/ https://gitlab.mw.lab.eng.bos.redhat.com/jbossqe-jenkins/mwqa-cloud-slaves/tree/master/label/linux/all_user_hudson/home/hudson/.vnc/xstartup"
+                sh "chmod 600 /home/hudson/.vnc/passwd"
             }
         }
         stage('Build kogito-tooling') {
