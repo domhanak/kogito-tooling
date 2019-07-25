@@ -2,7 +2,7 @@
 
 pipeline {
     agent {
-        label 'submarine-static || kie-rhel7'
+        label 'kie-rhel7'
     }
     tools {
         nodejs "nodejs-11.0.0"
