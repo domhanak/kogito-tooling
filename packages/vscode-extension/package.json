@@ -53,7 +53,8 @@
     "compile": "webpack",
     "watch": "webpack",
     "test:it": "rm -rf __tests__/out && tsc -p __tests__ && node __tests__/out/main.js",
-    "build:prod": "yarn run build --mode production && yarn run test:it && yarn run pack-extension"
+    "build:prod": "yarn run build --mode production && yarn run test:it && yarn run pack-extension",
+    "test-jenkins": "JUNIT_REPORT_PATH=/report.xml mocha --colors --reporter mocha-jenkins-reporter"
   },
   "devDependencies": {
     "@types/glob": "7.1.1",
@@ -63,6 +64,7 @@
     "copy-webpack-plugin": "5.0.3",
     "glob": "7.1.4",
     "mocha": "6.1.4",
+    "mocha-jenkins-reporter": "^0.4.1",
     "tslint": "5.12.1",
     "typescript": "3.3.1",
     "vsce": "1.59.0",

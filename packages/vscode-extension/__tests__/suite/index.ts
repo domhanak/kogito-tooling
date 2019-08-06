@@ -22,7 +22,13 @@ export function run(testsRoot: string, callback: (error: any, failures?: number)
   const mocha = new Mocha({
     ui: "tdd",
     useColors: true,
-    timeout: 10000
+    timeout: 10000,
+    reporter: "mocha-jenkins-reporter",
+    reporterOptions: {
+      junit_report_name: "Tests",
+      junit_report_path: "report.xml",
+      junit_report_stack: 1
+    }
   });
 
   glob("**/**.test.js", { cwd: testsRoot }, (err, files) => {
