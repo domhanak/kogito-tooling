@@ -35,8 +35,8 @@ pipeline {
                 dir("kogito-tooling") {
                     script {
                         githubscm.checkoutIfExists('kogito-tooling', "$CHANGE_AUTHOR", "$CHANGE_BRANCH", 'kiegroup', "$CHANGE_TARGET")
-                        wrap([$class: 'Xvfb']) {
-                            sh('yarn run init && yarn build:prod')
+                        wrap([$class: 'Xvnc', takeScreenshot: false, useXauthority: true]) {
+                            sh('yarn run init && yarn run build:prod')
                         }
                     }
                 }
