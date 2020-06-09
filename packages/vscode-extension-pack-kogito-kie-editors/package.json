@@ -77,7 +77,7 @@
     "compile": "webpack",
     "watch": "webpack",
     "test": "echo 'No tests to run.'",
-    "test:it": "rm -rf tests-it/out && tsc --sourceMap false -p tests-it && node tests-it/out/main.js",
+    "ui-test": "yarn run compile && tsc --sourceMap false && extest setup-and-run -o ./src/ui-test/resources/settings.json --yarn out/src/ui-test/*.test.js",
     "build:fast": "rm -rf dist && webpack",
     "build": "yarn run build:fast",
     "build:prod:linux:darwin": "yarn run build --mode production --devtool none && yarn run test && yarn run test:it && yarn run package:prod",
@@ -88,11 +88,15 @@
     "outputDirectory": "./target"
   },
   "dependencies": {
-    "@kogito-tooling/core-api": "0.5.1",
-    "@kogito-tooling/kie-bc-editors": "0.5.1",
-    "@kogito-tooling/kie-bc-editors-unpacked": "0.5.1",
-    "@kogito-tooling/microeditor-envelope": "0.5.1",
-    "@kogito-tooling/microeditor-envelope-protocol": "0.5.1",
-    "@kogito-tooling/vscode-extension": "0.5.1"
+    "@kogito-tooling/core-api": "0.4.3",
+    "@kogito-tooling/kie-bc-editors": "0.4.3",
+    "@kogito-tooling/kie-bc-editors-unpacked": "0.4.3",
+    "@kogito-tooling/microeditor-envelope": "0.4.3",
+    "@kogito-tooling/microeditor-envelope-protocol": "0.4.3",
+    "@kogito-tooling/vscode-extension": "0.4.3"
+  },
+  "devDependencies": {
+    "vscode-extension-tester-native": "^3.0.0",
+    "vscode-uitests-tooling": "^2.0.1"
   }
 }

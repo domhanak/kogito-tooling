@@ -1,9 +1,14 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "declaration": false
+    "declaration": false,
+    "resolveJsonModule": true,
+    "outDir": "out"
   },
   "include": [
     "src"
-  ]
+    ],
+    "exclude": [
+      "node_modules"
+    ]
 }
