@@ -88,12 +88,12 @@
     "outputDirectory": "./target"
   },
   "dependencies": {
-    "@kogito-tooling/core-api": "0.4.3",
-    "@kogito-tooling/kie-bc-editors": "0.4.3",
-    "@kogito-tooling/kie-bc-editors-unpacked": "0.4.3",
-    "@kogito-tooling/microeditor-envelope": "0.4.3",
-    "@kogito-tooling/microeditor-envelope-protocol": "0.4.3",
-    "@kogito-tooling/vscode-extension": "0.4.3"
+    "@kogito-tooling/core-api": "0.5.1",
+    "@kogito-tooling/kie-bc-editors": "0.5.1",
+    "@kogito-tooling/kie-bc-editors-unpacked": "0.5.1",
+    "@kogito-tooling/microeditor-envelope": "0.5.1",
+    "@kogito-tooling/microeditor-envelope-protocol": "0.5.1",
+    "@kogito-tooling/vscode-extension": "0.5.1"
   },
   "devDependencies": {
     "vscode-extension-tester-native": "^3.0.0",
