@@ -71,6 +71,8 @@
     "webpack-cli": "3.3.10",
     "webpack-dev-server": "3.9.0",
     "webpack-node-externals": "1.7.2",
-    "zip-webpack-plugin": "3.0.0"
+    "zip-webpack-plugin": "3.0.0",
+    "vscode-extension-tester-native": "^3.0.0",
+    "vscode-uitests-tooling": "^2.0.1"
   }
 }
