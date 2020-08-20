@@ -1,6 +1,6 @@
 import * as path from 'path';
 import * as helpers from './utils/DesktopTestHelper'
-import {Application, SpectronClient} from  'spectron';
+import { Application, SpectronClient } from  'spectron';
 import { HomePage } from './utils/HomePage';
 import { EditorPage } from'./utils/EditorPage';
 
@@ -31,9 +31,9 @@ const checkBasicDimensions = async (app: Application): Promise<void> => {
 }
 
 describe('Application Startup', function () {
-  helpers.setupTimeout(this)
+  helpers.setupTimeout(this);
 
-  let app: Application
+  let app: Application;
 
   beforeEach(async () => {
       const startedApp = await helpers.startApplication({

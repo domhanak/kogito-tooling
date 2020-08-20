@@ -1,4 +1,4 @@
-import { ApplicationSettings, Application, BasicAppSettings } from "spectron";
+import { Application, BasicAppSettings } from "spectron";
 import * as path from 'path';
 import * as assert from 'assert';
 import * as chai from 'chai';
