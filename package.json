@@ -52,8 +52,10 @@
     "node-sass": "4.12.0",
     "null-loader": "3.0.0",
     "prettier": "1.19.1",
+    "react-test-renderer": "^16.13.1",
     "run-script-os": "1.1.1",
     "sass-loader": "7.3.1",
+    "spectron": "^11.1.0",
     "string-replace-loader": "2.2.0",
     "style-loader": "1.0.0",
     "ts-jest": "^25.3.1",
@@ -71,7 +73,6 @@
     "webpack-dev-server": "3.9.0",
     "webpack-merge": "^5.0.9",
     "webpack-node-externals": "1.7.2",
-    "zip-webpack-plugin": "3.0.0",
-    "react-test-renderer": "^16.13.1"
+    "zip-webpack-plugin": "3.0.0"
   }
 }
