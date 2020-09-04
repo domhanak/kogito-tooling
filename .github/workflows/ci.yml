@@ -128,3 +128,10 @@ jobs:
         with:
           name: hub-app-windows
           path: "packages/hub/out/Business Modeler Hub Preview-win32-x64"
+             
+      - name: Upload Chrome Driver Logs for Desktop channel
+        if: failure()
+        uses: actions/upload-artifact@v1
+        with:
+          name: chrome-driver-logs.txt
+          path: "packages/desktop/chrome-logs.txt"
